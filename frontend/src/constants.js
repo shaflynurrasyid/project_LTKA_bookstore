@@ -1,6 +1,6 @@
 // export const BASE_URL = 
 //   process.env.NODE_ENV === 'develeopment' ? 'http://localhost:5000' : '';
-export const BASE_URL = 'https://backend-62nvxdrira-uc.a.run.app/'; // If using proxy
+export const BASE_URL = 'https://api.shafly.averrous.xyz'; // If using proxy
 //export const BASE_URL = ''; 
 export const PRODUCTS_URL = '/api/products';
 export const USERS_URL = '/api/users';
