@@ -13,12 +13,16 @@ const baseQuery = fetchBaseQuery({
 });
 
 async function baseQueryWithAuth(args, api, extra) {
-  const result = await baseQuery(args, api, extra);
-  // Dispatch the logout action on 401.
-  if (result.error && result.error.status === 401) {
-    api.dispatch(logout());
+  try {
+    const result = await baseQuery(args, api, extra);
+    return result;
+  } catch (error) {
+    console.error('Error in baseQueryWithAuth:', error);
+    if (error.status === 401) {
+      api.dispatch(logout());
+    }
+    throw error; // Rethrow the error to propagate it further
   }
-  return result;
 }
 
 export const apiSlice = createApi({
