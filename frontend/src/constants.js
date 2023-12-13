@@ -1,4 +1,4 @@
-// export const BASE_URL =
+// export const BASE_URL = 
 //   process.env.NODE_ENV === 'develeopment' ? 'http://localhost:5000' : '';
 //export const BASE_URL = 'https://backend-62nvxdrira-uc.a.run.app/'; // If using proxy
 export const BASE_URL = ''; 
